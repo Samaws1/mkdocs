@@ -1,7 +1,7 @@
 pipeline {
   environment {
     registry = "anishnath/mkdocs"
-    registryCredential = 'docker-creds'
+    registryCredential = 'jenk-nex-dkr'
     dockerImage = ''
   }
   agent any

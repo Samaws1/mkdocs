@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "anishnath/mkdocs"
+    registry = "3.138.33.207:8086"
     registryCredential = 'jenk-nex-dkr'
     dockerImage = ''
   }
@@ -40,7 +40,7 @@ pipeline {
     }
     stage('Remove Unused docker image') {
       steps{
-        sh "docker rmi $registry:$BUILD_NUMBER"
+        sh "docker rmi $registry/jenktest:$BUILD_NUMBER"
       }
     }
   }
